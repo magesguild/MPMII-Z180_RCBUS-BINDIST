@@ -89,6 +89,13 @@ Both kernels are build with the following settings:
 - SCM-S6: https://smallcomputercentral.com/firmware/firmware-scm-s6/
 - Extras: Various tools from Kevin Boone: https://github.com/kevinboone
 
+**Systems**
+- SC126: https://smallcomputercentral.com/rcbus/sc100-series/sc126-z180-motherboard-rc2014/
+- SC792: https://smallcomputercentral.com/rcbus/sc700-series/sc792-modular-z180-computer/
+_Note: The systems do not include the required CF Card Adapters, pick one of these:_
+- SC715: https://smallcomputercentral.com/rcbus/sc700-series/sc715-rcbus-compact-flash-module/
+- SC729: https://smallcomputercentral.com/rcbus/sc700-series/sc729-rcbus-compact-flash-module/
+
 **Installation**
 
 You probably already have the correct revision of SCM on your system, as it
