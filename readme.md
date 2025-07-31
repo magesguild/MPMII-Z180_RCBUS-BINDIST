@@ -86,14 +86,15 @@ Both kernels are build with the following settings:
 - MPMII-RCBus: https://github.com/tpycio/MPMII-RCBus
 - CPM-D: https://smallcomputercentral.com/articles/installing-cp-m-2-2-with-scm/
 - SCM-S9: https://smallcomputercentral.com/firmware/firmware-scm-s9/
+- SCM-S6: https://smallcomputercentral.com/firmware/firmware-scm-s6/
 - Extras: Various tools from Kevin Boone: https://github.com/kevinboone
 
 **Installation**
 
 You probably already have the correct revision of SCM on your system, as it
-arrived with the system, but in case you need to update it, the file in included
-in the scm directory. This configuration is S9 and it should function with both
-the SC126 and the SC792.
+arrived with the system, but in case you need to update it, the files are
+included in the scm directory. S9 is for the SC792 and the S6 build is for the
+SC126.
 
 Use minicom and your chip programmer to flash this to your memory module.
 
@@ -130,3 +131,48 @@ scalc and kcalc, in particular. Some tools are unixy, which is fun.
 
 Use NULU.COM to extract LBR files. You can extract files selectively if you only
 want certain tools from CPMTOOLS.LBR or EXTRAS.LBR.
+
+**Documentation**
+
+The doc dir contains a range of documentation and, while it is far from
+complete, it should be enough to get any user developing in assembly and C with
+some confidence. Some of the assemblers provided in the CPMTOOLS.LBR have been
+difficult to find documentation for, but I've provided as many as I have been
+able to scrape together (so far, a deeper search may yield more documentation in
+the future.)
+
+**System Administration**
+
+The SET.PRL command is extremely important for administering the system. While
+it may be a bit silly to be worried about admin versus non-admin users and their
+permission sets on these particular systems, where any user with physical access
+can simply boot into CP/M and gain full admin access, MP/M II gives us tools for
+managing file access, and there are some considerations to be made if you do
+want commands and files protected.
+
+SET.PRL itself can disable all password protection on any given drive, so it
+must, itself, be password protected for this to work well. Please read through
+the SET command documentation provided in the MP/M II User Guide closely before
+spending too much time attempting to password protect files.
+
+If you password protect set, you need to pass it the password manually like this
+to use it (to set your default password, which can then unlock things
+automatically):
+
+set;s3kr1t [default = s3kr1t]
+
+Replace s3kr1t with your own password.
+
+Also note that a password protected file must reside in a password enabled drive
+to function as expected.
+
+A:set [protect = on]
+
+Again, see the manual for more details, but this is a potential stumbling block,
+so practice it if you want to use passwords.
+
+This does mean that non administrative users can not password protect their own
+files, though an administrators can use different passwords to protect files
+from each other. It means all admins who need to use the set command must share
+a password for that command. Bare these things in mind as you build out your
+user design.
