@@ -112,13 +112,14 @@ and similar tools.
 
 DOWNLOAD.COM will receive the files in the pkg directory. You will need to
 enable Hardware Flow Control in minicom for these downloads to succeed. MBasic
-is optional but provided, the CPM files and the NULU application are required.
+is optional but provided, the NULU package is required.
 
 After receiving these files, you will want to disable Hardware Flow Control and
 begin using XM to pull the files from LBR. The following LBR files are required
 and they must be extracted into the default A: drive for user 0:
 
 - KRNZ180.LBR or KRNZ180N.LBR (only one)
+- KRNLDR.LBR
 - DISTRIB.LBR
 
 The other files are optional, but you probably want to install Y2KTOOLS.LBR
@@ -162,18 +163,18 @@ must, itself, be password protected for this to work well. Please read through
 the SET command documentation provided in the MP/M II User Guide closely before
 spending too much time attempting to password protect files.
 
-If you password protect set, you need to pass it the password manually like this
+If you password protect SET, you need to give it the password manually like this
 to use it (to set your default password, which can then unlock things
 automatically):
 
-set;s3kr1t [default = s3kr1t]
+    set;s3kr1t [default = s3kr1t]
 
 Replace s3kr1t with your own password.
 
 Also note that a password protected file must reside in a password enabled drive
 to function as expected.
 
-A:set [protect = on]
+    A:set [protect = on]
 
 Again, see the manual for more details, but this is a potential stumbling block,
 so practice it if you want to use passwords.
