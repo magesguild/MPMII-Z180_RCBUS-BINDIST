@@ -184,3 +184,11 @@ files, though an administrators can use different passwords to protect files
 from each other. It means all admins who need to use the set command must share
 a password for that command. Bare these things in mind as you build out your
 user design.
+
+**Addons**
+
+While the addons are included in the distribution, they are not built into the
+kernel. In order to use them, extract the addons you are interested into the A:
+drive and rebuild the kernel using GENSYS. You can select the defaults or change
+anything you like, but you will be prompted to include the addons you've
+unpacked here. 
