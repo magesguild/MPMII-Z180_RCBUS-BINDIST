@@ -103,7 +103,7 @@ arrived with the system, but in case you need to update it, the files are
 included in the scm directory. S9 is for the SC792 and the S6 build is for the
 SC126.
 
-Use minicom and your chip programmer to flash this to your memory module.
+Use minipro and your chip programmer to flash this to your memory module.
 
 From here you can install CP/M 2 using the contents of the scm\_apps directory.
 You will need to reboot between installing DOWNLOAD.COM and XM.COM. Simply send
