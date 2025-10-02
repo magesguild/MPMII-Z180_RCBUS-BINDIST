@@ -120,6 +120,8 @@ and they must be extracted into the default A: drive for user 0:
 
 - KRNZ180.LBR or KRNZ180N.LBR (only one)
 - KRNLDR.LBR
+    - note that you only _need_ mpm.sys from this library, the rest are there
+      for examination/troubleshooting.
 - DISTRIB.LBR
 
 The other files are optional, but you probably want to install Y2KTOOLS.LBR
